@@ -1,0 +1,278 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "vars";
+@import "nest";
+@import "circle";
+
+.clearfix {
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+body {
+	font-family: "PingHei","Lucida Grande", "Lucida Sans Unicode", "STHeiti", "Helvetica","Arial","Verdana","sans-serif";
+	background: #dedede;
+	font-size: font-base-size;
+	color: $text-color;
+	cursor: default;
+}
+
+a {
+	color: $text-color;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.title {
+	padding: 5px 0 10px;
+	font-weight: bold;
+}
+.text-link {
+	color: $gray-color;
+}
+.text-red {
+	color: $red-color;
+}
+.text-gray {
+	color: $gray-color;
+}
+.text-margin {
+	margin-right: 20px;
+}
+.text-s {
+	font-size: $font-small-size;
+}
+.text-t {
+	font-size: $font-title-size;
+}
+.text-l {
+	font-size: $font-large-size;
+}
+.icon {
+	opacity: 0.5;
+	@include single-transition(opacity, 0.3s, ease);
+	&:hover {
+		opacity: 0.9;
+	}
+}
+p {
+	line-height: $line-base-height;
+	text-align:left;
+	margin: 5px 0 0;
+	.first-letter {
+		float:left;
+		font-size: $font-large-size * 2;
+		line-height: $font-base-size * 2;
+		margin:0 5px 5px 0;
+	}
+}
+.github-btn {
+	vertical-align: middle;
+}
+.paper {	
+	background: $bg-color;	
+	padding: 20px;
+	@include box-shadow(0 0 2px 1px rgba(0,0,0,0.2));
+	@include border-radius(3px);
+	position: relative;
+	z-index:1;
+}
+.paper-b {
+	width: 840px;
+	margin:30px auto;
+	position: relative;
+	&:before, &:after {
+		content:"";
+		display:block;
+		width: 100%;
+		height: 100%;
+		background: $bg-color;
+		@include box-shadow(0 0 2px 1px rgba(0,0,0,0.2));
+		@include border-radius(3px);		
+		position: absolute;
+		left:0;top:0;
+	}
+	&:before {
+		@include rotate(2deg);
+	}
+	&:after {
+		@include translate(10px, -8px);
+	}
+}
+
+.header {
+	padding: 20px 0;
+	.nest {
+		@include nest(100px, $bg-color, $gray-color);
+		margin:0 auto;
+	}
+	h1 {
+		text-align: center;
+		font-size: 40px;
+		padding-top: 20px;
+		position: relative;
+		span {
+			position: absolute;
+			font-size: $font-small-size;
+			margin-left: 15px;
+			bottom: 4px;
+			color: $gray-color;
+		}
+	}
+	ul {
+		text-align: center;
+		margin-top: 20px;
+		li {
+			a {
+				color: $gray-color;
+			}
+			color: $gray-color;
+			list-style-type: none;
+			display: inline-block;
+			margin-right: 20px;			
+			li:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.frame {
+	border-top: 1px solid $border-color;
+	padding: 20px 0;
+	text-align:center;
+	position: relative;
+
+	.frame-title {
+		position: absolute;
+		left: 50%;
+		@include translateX(-50%);
+		height: 20px;
+		line-height: 20px;
+		top: -10px;
+		color: darken($border-color, 10%);
+		background: $bg-color;
+		padding: 0 10px;
+		font-size: 12px;
+	}
+}
+
+
+.group {
+	@extend .clearfix;
+	padding-left: 40px;
+	padding-right: 40px;
+	.group-left {
+		width: 150px;
+		float: left;
+	}
+	.group-ctnt {
+		margin-left: 180px;
+	}
+}
+
+.p-block {
+	padding: 0 40px;
+}
+
+@for $i from 1 through 10 {
+	$size: 120px;
+	.circle {
+		display: inline-block;
+		span {
+			position: absolute;
+			z-index:2;
+			width: $size;
+			height: $size;
+			line-height: $size;
+			display: block;
+			text-align: center;
+			letter-spacing: -1px;
+			font-size: font-base-size;
+		}
+	}
+	.circle.circle_#{$i*10} {
+		@include circle($i/10, $size, 10px, $bg-color, $text-color, $border-color);
+	}
+}
+.circles {
+	.circle {
+		margin: 0 40px;
+	}
+}
+
+.time-table {
+	padding: 10px;
+	li {
+		position: relative;
+		b {
+			position: absolute;
+			top:50%;
+			@include translateY(-50%);
+			display: block;
+			width: 90px;
+			text-align: right;
+			padding-right: 10px;
+			font-size: $font-small-size;
+			color:$gray-color;
+		}
+		p {
+			margin-left: 125px;
+			padding: 10px 5px;
+			position: relative;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 1px;
+				left: -19px;
+				top:0;
+				bottom:0;
+				background:$border-color;
+			}
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 6px;
+				height: 6px;
+				left: -22px;
+				top:50%;
+				@include border-radius(50%);
+				@include translateY(-50%);
+				@include single-transition(background-color,.3s, ease);
+				background:$border-color;
+			}
+		}
+		&:first-child p:before {
+			top: 50%;
+		}
+		&:last-child p:before {
+			bottom: 50%;
+		}
+		&:last-child p:after {
+			background: $gray-color;
+			@include box-shadow(0 0 0 4px $border-color);
+		}
+	}
+	&:hover li p:after {
+		background: $border-color;
+		@include box-shadow(none);
+	}
+	& li:hover p:after {
+		background: $gray-color;
+		@include box-shadow(0 0 0 4px $border-color);
+	}
+}
+
+
+

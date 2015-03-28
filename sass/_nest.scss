@@ -1,0 +1,70 @@
+@import "compass/css3";
+@mixin nest ($lengthOfSide:80px, $backgroundColor:#F8F8F8, $borderColor: #ffffff ) {	
+
+	$borderWidth: $lengthOfSide / 15;	
+	$sqrt_3: 1.7320508075688772;
+	width: ($lengthOfSide / 2 * $sqrt_3) * 2;
+	height: $lengthOfSide * 2;
+	position: relative;
+	background: $backgroundColor;
+	overflow: hidden;
+
+	img {
+		width: $lengthOfSide * 2;
+		height: $lengthOfSide * 2;
+		margin-left: -($lengthOfSide * 2 - ($lengthOfSide / 2 * $sqrt_3) * 2) / 2;
+		background: #000;
+		position: absolute;
+		top:0;
+		left:0;
+	}
+	i:before, i:after, b:before, b:after {
+		content: "";
+		display: block;
+		width: $lengthOfSide;
+		height: ($lengthOfSide / 4) * $sqrt_3;			
+		background: $backgroundColor;
+		position: absolute;
+	}
+	b:before, b:after {
+		height: ($lengthOfSide / 4) * $sqrt_3 + $borderWidth;
+		background: $borderColor;
+	}
+	i.l:before, b.l:before {
+		top: 0;
+		left: -($lengthOfSide / 4);
+		@include transform-origin($lengthOfSide / 4, top);
+		@include rotate(-30deg);
+	}
+	i.l:after, b.l:after {
+		bottom: 0;
+		left: -($lengthOfSide / 4);
+		@include transform-origin($lengthOfSide / 4, bottom);
+		@include rotate(30deg);
+	}
+	i.r:before, b.r:before {
+		top: 0;
+		right: -($lengthOfSide / 4);
+		@include transform-origin($lengthOfSide - $lengthOfSide / 4, top);
+		@include rotate(30deg);
+	}
+	i.r:after, b.r:after {
+		bottom: 0;
+		right: -($lengthOfSide / 4);
+		@include transform-origin($lengthOfSide - $lengthOfSide / 4, bottom);
+		@include rotate(-30deg);
+	}
+	b.l, b.r {
+		width: $borderWidth;
+		position: absolute;
+		top:0;
+		bottom:0;
+		background: $borderColor;
+		&.l {
+			left:0;
+		}
+		&.r {
+			right:0;
+		}
+	}
+}

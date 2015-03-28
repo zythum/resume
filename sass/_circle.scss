@@ -1,0 +1,94 @@
+@import "compass/css3";
+@mixin edgePos($pst, $size, $lineWidth) {
+	$r: ($size - $lineWidth) / 2;
+	$deg: 360deg / 1 * $pst + 180deg;
+	left: sin($deg) * $r;
+	top: cos($deg) * $r;
+}
+
+@mixin circle(
+	$pst:0.8, 
+	$size:80px, 
+	$lineWidth:10px, 
+	$backgroundColor:#F8F8F8, 
+	$lineColor: #000000,
+	$lineBackgroundColor: #cccccc
+) {
+	width: $size;
+	height: $size;
+	@include border-radius(50%);
+	position: relative;
+	background: $lineBackgroundColor;
+	
+	&:after, &:before {
+		content: "";
+		background: $lineColor;
+		width: $lineWidth;
+		height: $lineWidth;
+		@include border-radius(50%);
+		position: absolute;
+		margin-left: ($size - $lineWidth) / 2;
+		margin-top: ($size - $lineWidth) / 2;
+	}
+	
+	
+
+	&:before {
+		@include edgePos(0, $size, $lineWidth);
+	}
+	&:after {
+		@include edgePos($pst, $size, $lineWidth);
+	}
+
+	i {
+		position: relative;	
+		width: $size;
+		height: $size;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@include border-radius(50%);
+		overflow: hidden;
+		&.r:before, &.l:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 50%;
+			top: 0;
+			left:0;
+			bottom: 0;
+		};
+		&.l:before {
+			background: $lineColor;
+		}
+		&.m {
+			width: $size - 2 * $lineWidth;
+			height: $size - 2 * $lineWidth;
+			top: $lineWidth;
+			left: $lineWidth;
+			background: $backgroundColor;
+			z-index: 1;
+		}
+		&.r {
+			@if $pst >= 0.5 {
+				$deg: 180deg / 0.5 * ($pst - 0.5);
+				@include rotate(-$deg);
+				&:before {
+					background: $lineColor;
+				}
+			}
+			@if $pst < 0.5 {			
+				//fix: 不然有个虚框
+				width: $size + 2;
+				height: $size + 2;
+				left: -1px;
+				top: -1px;
+				$deg: 180deg / 0.5 * $pst;
+				@include rotate(-$deg);
+				&:before {
+					background: $lineBackgroundColor;
+				}
+			}
+		}
+	}
+}

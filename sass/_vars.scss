@@ -1,0 +1,32 @@
+$text-color:  #333333;
+$link-color:  #00bab6;
+$gray-color:  #666666;
+$red-color:   #e5545a;
+$orange-color:#F36516;
+$white-color: #ffffff;
+$bg-color:    #f8f8f8;
+$border-color:#e2e2e2;
+
+$link-hover-color: darken($link-color, 15%);
+
+$font-base-size:  16px;
+$font-small-size: 14px;
+$font-title-size: 18px;
+$font-large-size: 24px;
+
+$padding-base-vertical:    6px;
+$padding-base-horizontal:  12px;
+
+$padding-small-vertical:   6px;
+$padding-small-horizontal: 6px;
+
+$padding-large-vertical:   4px;
+$padding-large-horizontal: 26px;
+
+$line-base-height:  1.4;
+$line-large-height: 1.8;
+$line-small-height: 1.2;
+
+$border-base-radius:   3px;
+$border-large-radius:  4px;
+$border-small-radius:  2px;
