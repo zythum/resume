@@ -88,23 +88,23 @@ body {
   display: none;
 }
 
-/* line 30, screen.scss */
+/* line 31, screen.scss */
 a {
   color: #333333;
   text-decoration: none;
 }
-/* line 33, screen.scss */
+/* line 34, screen.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 39, screen.scss */
+/* line 40, screen.scss */
 ol li {
   margin-bottom: 10px;
   line-height: 150%;
   position: relative;
 }
-/* line 43, screen.scss */
+/* line 44, screen.scss */
 ol li:before {
   content: "";
   display: block;
@@ -127,48 +127,48 @@ ol li:before {
   background: #666666;
 }
 
-/* line 59, screen.scss */
+/* line 60, screen.scss */
 .title {
   padding: 5px 0 10px;
   font-weight: bold;
 }
 
-/* line 63, screen.scss */
+/* line 64, screen.scss */
 .text-link {
   color: #666666;
 }
 
-/* line 66, screen.scss */
+/* line 67, screen.scss */
 .text-red {
   color: #e5545a;
 }
 
-/* line 69, screen.scss */
+/* line 70, screen.scss */
 .text-gray {
   color: #666666;
 }
 
-/* line 72, screen.scss */
+/* line 73, screen.scss */
 .text-margin {
   margin-right: 20px;
 }
 
-/* line 75, screen.scss */
+/* line 76, screen.scss */
 .text-s {
   font-size: 14px;
 }
 
-/* line 78, screen.scss */
+/* line 79, screen.scss */
 .text-t {
   font-size: 18px;
 }
 
-/* line 81, screen.scss */
+/* line 82, screen.scss */
 .text-l {
   font-size: 24px;
 }
 
-/* line 84, screen.scss */
+/* line 85, screen.scss */
 .icon {
   opacity: 0.5;
   -moz-transition: opacity 0.3s ease;
@@ -176,18 +176,18 @@ ol li:before {
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
-/* line 87, screen.scss */
+/* line 88, screen.scss */
 .icon:hover {
   opacity: 0.9;
 }
 
-/* line 91, screen.scss */
+/* line 92, screen.scss */
 p {
   line-height: 1.4;
   text-align: left;
   margin: 5px 0 0;
 }
-/* line 95, screen.scss */
+/* line 96, screen.scss */
 p .first-letter {
   float: left;
   font-size: 48px;
@@ -195,12 +195,12 @@ p .first-letter {
   margin: 0 5px 5px 0;
 }
 
-/* line 102, screen.scss */
+/* line 103, screen.scss */
 .github-btn {
   vertical-align: middle;
 }
 
-/* line 105, screen.scss */
+/* line 106, screen.scss */
 .paper {
   background: #f8f8f8;
   padding: 20px;
@@ -214,13 +214,13 @@ p .first-letter {
   z-index: 1;
 }
 
-/* line 113, screen.scss */
+/* line 114, screen.scss */
 .paper-b {
   width: 840px;
   margin: 30px auto;
   position: relative;
 }
-/* line 117, screen.scss */
+/* line 118, screen.scss */
 .paper-b:before, .paper-b:after {
   content: "";
   display: block;
@@ -237,14 +237,14 @@ p .first-letter {
   left: 0;
   top: 0;
 }
-/* line 128, screen.scss */
+/* line 129, screen.scss */
 .paper-b:before {
   -moz-transform: rotate(2deg);
   -ms-transform: rotate(2deg);
   -webkit-transform: rotate(2deg);
   transform: rotate(2deg);
 }
-/* line 131, screen.scss */
+/* line 132, screen.scss */
 .paper-b:after {
   -moz-transform: translate(10px, -8px);
   -ms-transform: translate(10px, -8px);
@@ -252,11 +252,11 @@ p .first-letter {
   transform: translate(10px, -8px);
 }
 
-/* line 136, screen.scss */
+/* line 137, screen.scss */
 .header {
   padding: 20px 0;
 }
-/* line 138, screen.scss */
+/* line 139, screen.scss */
 .header .nest {
   width: 173.20508px;
   height: 200px;
@@ -357,14 +357,14 @@ p .first-letter {
 .header .nest b.l.r, .header .nest b.r.r {
   right: 0;
 }
-/* line 142, screen.scss */
+/* line 143, screen.scss */
 .header h1 {
   text-align: center;
   font-size: 40px;
   padding-top: 20px;
   position: relative;
 }
-/* line 147, screen.scss */
+/* line 148, screen.scss */
 .header h1 span {
   position: absolute;
   font-size: 14px;
@@ -372,35 +372,35 @@ p .first-letter {
   bottom: 4px;
   color: #666666;
 }
-/* line 155, screen.scss */
+/* line 156, screen.scss */
 .header ul {
   text-align: center;
   margin-top: 20px;
 }
-/* line 158, screen.scss */
+/* line 159, screen.scss */
 .header ul li {
   color: #666666;
   list-style-type: none;
   display: inline-block;
   margin-right: 20px;
 }
-/* line 159, screen.scss */
+/* line 160, screen.scss */
 .header ul li a {
   color: #666666;
 }
-/* line 166, screen.scss */
+/* line 167, screen.scss */
 .header ul li li:last-child {
   margin-right: 0;
 }
 
-/* line 173, screen.scss */
+/* line 174, screen.scss */
 .frame {
   border-top: 1px solid #e2e2e2;
   padding: 20px 0;
   text-align: center;
   position: relative;
 }
-/* line 179, screen.scss */
+/* line 180, screen.scss */
 .frame .frame-title {
   position: absolute;
   left: 50%;
@@ -417,32 +417,32 @@ p .first-letter {
   font-size: 12px;
 }
 
-/* line 194, screen.scss */
+/* line 195, screen.scss */
 .group {
   padding-left: 40px;
   padding-right: 40px;
 }
-/* line 198, screen.scss */
+/* line 199, screen.scss */
 .group .group-left {
   width: 150px;
   float: left;
 }
-/* line 202, screen.scss */
+/* line 203, screen.scss */
 .group .group-ctnt {
   margin-left: 180px;
   text-align: left;
 }
 
-/* line 208, screen.scss */
+/* line 209, screen.scss */
 .p-block {
   padding: 0 40px;
 }
 
-/* line 213, screen.scss */
+/* line 214, screen.scss */
 .circle {
   display: inline-block;
 }
-/* line 215, screen.scss */
+/* line 216, screen.scss */
 .circle span {
   position: absolute;
   z-index: 2;
@@ -455,7 +455,7 @@ p .first-letter {
   font-size: font-base-size;
 }
 
-/* line 228, screen.scss */
+/* line 229, screen.scss */
 .circle.circle_10 {
   width: 120px;
   height: 120px;
@@ -540,7 +540,7 @@ p .first-letter {
   background: #e2e2e2;
 }
 
-/* line 228, screen.scss */
+/* line 229, screen.scss */
 .circle.circle_20 {
   width: 120px;
   height: 120px;
@@ -625,7 +625,7 @@ p .first-letter {
   background: #e2e2e2;
 }
 
-/* line 228, screen.scss */
+/* line 229, screen.scss */
 .circle.circle_30 {
   width: 120px;
   height: 120px;
@@ -710,7 +710,7 @@ p .first-letter {
   background: #e2e2e2;
 }
 
-/* line 228, screen.scss */
+/* line 229, screen.scss */
 .circle.circle_40 {
   width: 120px;
   height: 120px;
@@ -795,7 +795,7 @@ p .first-letter {
   background: #e2e2e2;
 }
 
-/* line 228, screen.scss */
+/* line 229, screen.scss */
 .circle.circle_50 {
   width: 120px;
   height: 120px;
@@ -876,7 +876,7 @@ p .first-letter {
   background: #333333;
 }
 
-/* line 228, screen.scss */
+/* line 229, screen.scss */
 .circle.circle_60 {
   width: 120px;
   height: 120px;
@@ -957,7 +957,7 @@ p .first-letter {
   background: #333333;
 }
 
-/* line 228, screen.scss */
+/* line 229, screen.scss */
 .circle.circle_70 {
   width: 120px;
   height: 120px;
@@ -1038,7 +1038,7 @@ p .first-letter {
   background: #333333;
 }
 
-/* line 228, screen.scss */
+/* line 229, screen.scss */
 .circle.circle_80 {
   width: 120px;
   height: 120px;
@@ -1119,7 +1119,7 @@ p .first-letter {
   background: #333333;
 }
 
-/* line 228, screen.scss */
+/* line 229, screen.scss */
 .circle.circle_90 {
   width: 120px;
   height: 120px;
@@ -1200,7 +1200,7 @@ p .first-letter {
   background: #333333;
 }
 
-/* line 228, screen.scss */
+/* line 229, screen.scss */
 .circle.circle_100 {
   width: 120px;
   height: 120px;
@@ -1281,20 +1281,20 @@ p .first-letter {
   background: #333333;
 }
 
-/* line 234, screen.scss */
+/* line 235, screen.scss */
 .circles .circle {
   margin: 0 40px;
 }
 
-/* line 239, screen.scss */
+/* line 240, screen.scss */
 .time-table {
   padding: 10px;
 }
-/* line 241, screen.scss */
+/* line 242, screen.scss */
 .time-table li {
   position: relative;
 }
-/* line 243, screen.scss */
+/* line 244, screen.scss */
 .time-table li b {
   position: absolute;
   top: 50%;
@@ -1309,14 +1309,14 @@ p .first-letter {
   font-size: 14px;
   color: #666666;
 }
-/* line 254, screen.scss */
+/* line 255, screen.scss */
 .time-table li p {
   margin-left: 125px;
   margin-top: 0;
   padding: 10px 5px;
   position: relative;
 }
-/* line 259, screen.scss */
+/* line 260, screen.scss */
 .time-table li p:before {
   content: "";
   display: block;
@@ -1327,7 +1327,7 @@ p .first-letter {
   bottom: 0;
   background: #e2e2e2;
 }
-/* line 269, screen.scss */
+/* line 270, screen.scss */
 .time-table li p:after {
   content: "";
   display: block;
@@ -1349,29 +1349,29 @@ p .first-letter {
   transition: background-color 0.3s ease;
   background: #e2e2e2;
 }
-/* line 283, screen.scss */
+/* line 284, screen.scss */
 .time-table li:first-child p:before {
   top: 50%;
 }
-/* line 286, screen.scss */
+/* line 287, screen.scss */
 .time-table li:last-child p:before {
   bottom: 50%;
 }
-/* line 289, screen.scss */
+/* line 290, screen.scss */
 .time-table li:last-child p:after {
   background: #666666;
   -moz-box-shadow: 0 0 0 4px #e2e2e2;
   -webkit-box-shadow: 0 0 0 4px #e2e2e2;
   box-shadow: 0 0 0 4px #e2e2e2;
 }
-/* line 294, screen.scss */
+/* line 295, screen.scss */
 .time-table:hover li p:after {
   background: #e2e2e2;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 298, screen.scss */
+/* line 299, screen.scss */
 .time-table li:hover p:after {
   background: #666666;
   -moz-box-shadow: 0 0 0 4px #e2e2e2;
