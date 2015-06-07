@@ -1,3 +1,37 @@
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+body {
+  background: #FFFFFF;
+}
+
+.paper-b {
+  &:after, &:before {
+    display: none;
+  }
+  .paper {
+    border: none;
+    background: #FFFFFF;
+    box-shadow: none;
+  }
+}
+
+.nest {
+  display: none;
+}
+
+.print {
+  display: inline;
+}
+
+.frame .frame-title {
+  background: #FFFFFF;
+}
+
+.circle {
+  background: #FFFFFF!important;
+  &:before, &:after, .l, .r, .m{
+    display: none;
+  }
+}

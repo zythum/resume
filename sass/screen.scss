@@ -24,11 +24,36 @@ body {
 	cursor: default;
 }
 
+.print {
+	display: none;
+}
+
 a {
 	color: $text-color;
 	text-decoration: none;
 	&:hover {
 		text-decoration: underline;
+	}
+}
+
+ol {
+	li {
+		margin-bottom: 10px;
+		line-height: 150%;
+		position: relative;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			left: -15px;
+			top:50%;
+			@include border-radius(50%);
+			@include translateY(-50%);
+			@include single-transition(background-color,.3s, ease);
+			background: $gray-color;
+		}
 	}
 }
 
@@ -177,6 +202,7 @@ p {
 	}
 	.group-ctnt {
 		margin-left: 180px;
+		text-align: left;
 	}
 }
 
@@ -184,26 +210,27 @@ p {
 	padding: 0 40px;
 }
 
-@for $i from 1 through 10 {
-	$size: 120px;
-	.circle {
-		display: inline-block;
-		span {
-			position: absolute;
-			z-index:2;
-			width: $size;
-			height: $size;
-			line-height: $size;
-			display: block;
-			text-align: center;
-			letter-spacing: -1px;
-			font-size: font-base-size;
-		}
-	}
-	.circle.circle_#{$i*10} {
-		@include circle($i/10, $size, 10px, $bg-color, $text-color, $border-color);
+$circle-size: 120px;
+.circle {
+	display: inline-block;
+	span {
+		position: absolute;
+		z-index:2;
+		width: $circle-size;
+		height: $circle-size;
+		line-height: $circle-size;
+		display: block;
+		text-align: center;
+		letter-spacing: -1px;
+		font-size: font-base-size;
 	}
 }
+@for $i from 1 through 10 {
+	.circle.circle_#{$i*10} {
+		@include circle($i/10, $circle-size, 10px, $bg-color, $text-color, $border-color);
+	}
+}
+
 .circles {
 	.circle {
 		margin: 0 40px;
@@ -227,6 +254,7 @@ p {
 		}
 		p {
 			margin-left: 125px;
+			margin-top: 0;
 			padding: 10px 5px;
 			position: relative;
 			&:before {
