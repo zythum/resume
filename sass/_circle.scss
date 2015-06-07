@@ -92,3 +92,24 @@
 		}
 	}
 }
+
+$circle-size: 120px;
+.circle {
+	display: inline-block;
+	span {
+		position: absolute;
+		z-index:2;
+		width: $circle-size;
+		height: $circle-size;
+		line-height: $circle-size;
+		display: block;
+		text-align: center;
+		letter-spacing: -1px;
+		font-size: font-base-size;
+	}
+}
+@each $i in 3,7,8,9 {
+	.circle.circle_#{$i*10} {
+		@include circle($i/10, $circle-size, 10px, $bg-color, $text-color, $border-color);
+	}
+}
