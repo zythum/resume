@@ -48,11 +48,14 @@ ol {
 			width: 6px;
 			height: 6px;
 			left: -15px;
-			top:50%;
+			top: 10px;
 			@include border-radius(50%);
-			@include translateY(-50%);
 			@include single-transition(background-color,.3s, ease);
 			background: $gray-color;
+		}
+		p {
+			color: $gray-color;
+			font-size: $font-small-size;
 		}
 	}
 }
